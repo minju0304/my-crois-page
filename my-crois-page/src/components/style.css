@@ -1,0 +1,241 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    background-color: #171036;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 28px;
+    height: 22px;
+    padding: 0;
+    z-index: 1100;
+  }
+
+  .menu-button .bar {
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+  }
+
+  .sidebar {
+    position: fixed; /* 화면 스크롤과 상관 없이 항상 고정 위치 */
+    top: 0; right: -350px;
+    width: 300px;
+    height: 100vh;
+    background-color: #000000;
+    color: white;
+    padding: 60px 20px 20px 20px; /* 헤더 높이 고려 */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 1100;
+    transition: right 0.3s ease;
+  }
+  
+  .sidebar.open {
+    right: 0;
+  }
+
+  /* 사이드바 닫기 버튼 */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* 링크 스타일 */
+  .sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  .sidebar a:hover {
+    text-decoration: underline;
+  }
+  
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;         /* 왼쪽 정렬 */
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    background-position: center;
+    color: white;
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  .hero-container {
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  }
+
+  
+  /* .hero 안에 일반 p 태그는 기본 중앙 정렬 유지 */
+  .hero p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    text-align: left;
+    align-self: flex-start;  /* flex 컨테이너 내에서 왼쪽 정렬 */
+  }
+
+  .about {
+    height: 100vh;
+    width: 100%;
+    padding: 0px 20px;
+    background-color: #f8f9fa; /* 연한 회색 배경 */
+    text-align: center;
+    justify-content: center;   /* 가로 가운데 */
+    align-items: center;  
+    display: flex;
+  }
+  
+  .about-container {
+    margin: 0 auto;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #000000;
+    line-height: 1.4;
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+  }
+
+  .business {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    
+    display: flex;               /* Flexbox 설정 */
+    justify-content: center;    /* 수평 정렬 */
+    align-items: center; 
+  }
+  
+  .business-container {
+    margin: 0 auto;       /* 좌우 중앙 정렬 */
+    width: 100%;  
+    padding: 0px 500px;      /* 좌우 여백 추가 (선택사항) */
+    box-sizing: border-box;
+  }
+  
+  .business h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .business-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 항상 2열 */
+    grid-template-rows: repeat(2, 1fr);
+    gap: 24px;
+    width: 100%;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .business-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #191970;
+    color: white;
+    font-size: 1.2rem;
+    aspect-ratio: 12 / 1.4;
+    font-weight: 600;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .business-card:hover {
+    background-color: #2f2fa2;
+  }
+  
+
+  .footer {
+    background-color: #171036;
+    color: white;
+    padding: 40px 20px;
+    width: 100%;
+  }
+  
+  .footer-container {
+    height: 85vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-info {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  
+  .footer-links {
+    flex: 1 1 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
